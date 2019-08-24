@@ -1,4 +1,4 @@
-# Sample project demonstrate Struts 1
+# Sample project demonstrates Struts 1
 
 - Clone the project into your eclipse workspace
 
