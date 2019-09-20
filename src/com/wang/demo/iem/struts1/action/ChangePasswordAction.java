@@ -10,20 +10,13 @@ import org.apache.struts.action.ActionMapping;
 
 import com.wang.demo.iem.struts1.form.LoginForm;
 
-public class LoginAction extends Action{
+public class ChangePasswordAction extends Action{
 	
     private final static String SUCCESS = "success";
     private final static String FAILURE = "failure";
 
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        LoginForm loginForm = (LoginForm) form;
-        if (null != loginForm.getUserName() && null != loginForm.getPassword()
-        		&& loginForm.getUserName().length() > 0 && loginForm.getPassword().length() > 0
-        		&& loginForm.getUserName().equals(loginForm.getPassword())) {
-        		request.getSession().setAttribute("name",loginForm.getUserName());  
             return mapping.findForward(SUCCESS);
-        } else {
-            return mapping.findForward(FAILURE);
-        }
+
     }
 }

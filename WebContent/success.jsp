@@ -10,5 +10,6 @@
     </head>
     <body>
         <h1>Login Success. Welcome <bean:write name="loginForm" property="userName"></bean:write></h1>
+    	<a href="ListSettings.do">My Settings</a> 
     </body>
 </html>

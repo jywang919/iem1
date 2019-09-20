@@ -8,7 +8,8 @@
 	<form-beans>
 		<form-bean name="loginForm" 
 		type="com.wang.demo.iem.struts1.form.LoginForm"/>
-		
+		<form-bean name="accountForm" 
+		type="com.wang.demo.iem.struts1.form.AccountForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -18,6 +19,19 @@
 			name="loginForm">
 			<forward name="success" path="/success.jsp" />
 			<forward name="failure" path="/failure.jsp" />
+	   </action>
+	   
+	   <action path="/ListSettings"
+			scope="session"
+			type="com.wang.demo.iem.struts1.action.ListSettingsAction" 
+			name="accountForm">
+			<forward name="success" path="/my-settings.jsp" />
+	   </action>
+	   
+	   <action path="/Changepassword"
+			scope="session"
+			type="com.wang.demo.iem.struts1.action.ChangePasswordAction" >
+			<forward name="success" path="/change-password.jsp" />
 	   </action>
 	   
 	</action-mappings>

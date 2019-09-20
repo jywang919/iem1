@@ -18,3 +18,19 @@
 	
 	otherwise, a failure page will be displayed
 	
+- Remote debugging
+	copy setenv.sh(.bat to tomcat bin folder) -> start tomcat:  startup.sh
+	
+	in Eclipse, 
+	
+	Add break points in classes
+	
+	Debug Configurations -> Remote Java Application
+	project:iem1  (or browse)
+	Connection Type: Standard (Socket Attach)
+	Host: Localhost
+	port: 8787
+	Apply -> Debug
+	
+	
+	
